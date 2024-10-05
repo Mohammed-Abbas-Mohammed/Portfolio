@@ -1,0 +1,561 @@
+*{
+    box-sizing: border-box;
+    
+}
+
+html,body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #23d3ff 0%, #276aa5 100%);
+    font-family: Arial, sans-serif;
+    min-height: 100%;
+     width: 100vw;
+
+}
+
+#Side_Bar{
+    top: 0;
+    position: sticky;
+    max-height: 650px;
+    padding-top: 20px;
+    margin: 50px;
+    z-index: 1;
+    border: 1px solid;
+    border-radius: 20px;
+    box-shadow: 0 24px 80px hsla(0, 0%, 0%, 0.25);
+    background: hsla(240, 2%, 12%, 0.418);
+    transition:  0.5s ease-in-out;
+    
+}
+
+#Main_content{
+    height: max-content;
+    padding-top: 20px;
+    margin: 50px 30px;
+    z-index: 1;
+    border: 1px solid;
+    border-radius: 20px;
+    box-shadow: 0 24px 80px hsla(0, 0%, 0%, 0.25);
+    background: hsla(240, 2%, 12%, 0.418);
+
+    
+}
+
+.info{
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+#my{
+    display: block;
+    width: 150px;
+    border-radius: 30px;
+}
+
+#name{
+    text-align: center;
+    margin: 15px auto;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    background: hsla(240, 2%, 12%, 0.418);
+    font-size:15px;
+    font-weight: 300;
+    width: 80%px;
+    margin: 5px auto;
+    border-radius: 18px;
+
+}
+
+.shadow_y{
+    animation: glow 5s ease-in-out infinite alternate;
+    box-shadow: 0 0 0.5px #fff, 0 0 1px #fff, 0 0 2px #fff, 0 0 4px hsla(45, 100%, 90%, 0.5), 0 0 7px hsla(45, 100%, 90%, 0.5), 0 0 10px hsla(45, 100%, 90%, 0.5), 0 0 12px hsla(45, 100%, 90%, 0.5), 0 0 15px hsla(45, 100%, 90%, 0.5);
+}
+
+.sperator{
+    width: 85%;
+    height: 1px;
+    margin: 32px auto;
+    background: hsl(0, 0%, 22%);
+}
+
+@keyframes glow{
+    0% {
+        box-shadow: 0 0 0.5px #fff, 0 0 1px #fff, 0 0 2px #fff, 0 0 4px hsla(45, 100%, 90%, 0.5), 0 0 7px hsla(45, 100%, 90%, 0.5), 0 0 10px hsla(45, 100%, 90%, 0.5), 0 0 12px hsla(45, 100%, 90%, 0.5), 0 0 15px hsla(45, 100%, 90%, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 2.5px #ffffff0e;
+    }
+}
+
+.contact_list {
+    display: grid;
+    grid-template-columns: 8fr;
+    gap: 15px 15px;
+}
+
+.contact_item{
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+}
+li {
+    list-style: none;
+}
+
+.icon_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    font-size: 18px;
+    background: black;
+    color: hsl(45, 100%, 72%);
+    box-shadow: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
+    z-index: 1;
+}
+
+.inner_icon{
+    font-size: 18px;
+    color: hsl(45, 100%, 72%);
+}
+
+.contact_info{
+    text-transform: uppercase;
+    margin-bottom: 2px;
+}
+
+time{
+    font-size: 14px;
+}
+
+.contact_title{
+    color: hsla(0, 0%, 84%, 0.7);
+}
+
+.content-section {
+    display: none; 
+    padding: 20px;
+    color: hsl(0, 0%, 98%);
+}
+
+.content-section.active {
+    display: block; /* Show the active section */
+}
+
+/* Ensure the parent container is positioned */
+.nav-container {
+    position: relative; /* This is crucial for positioning children */
+    width: 100%;
+}
+
+/* Position nav at the top-right of its parent */
+nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: max-content;
+    border-radius: 0 20px;
+    padding: 0 10px;
+    box-shadow: none;
+    background: hsla(240, 1%, 17%, 0.75);
+    backdrop-filter: blur(10px);
+    border: 1px solid hsl(0, 0%, 22%);
+}
+
+/* Flexbox properties to center buttons horizontally and vertically */
+#buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    padding: 10px 20px; /* Adjust padding if needed */
+}
+
+.buttons_li {
+    margin: 0;
+    padding: 0;
+}
+
+.nav_item {
+    font-size: 18px;
+    /* color: hsl(45, 100%, 72%); */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    color: hsl(0, 0%, 84%);
+    transition: color 0.25s ease;
+    font: inherit;
+    /* text-align: left; */
+    display: block;
+    height:100%; /* Automatic height */
+    width: 100%; /* Automatic width */
+    min-width: 100px; /* Minimum width for buttons */
+}
+
+
+.nav_item:hover,.nav_item.active {
+    color: hsl(35, 100%, 68%);
+    background-color: hsla(45, 100%, 72%, 0.1); /* Light background to indicate active/hover state */
+    border-radius: 5px; /* Optional: adds rounded corners */
+}
+
+
+.article_title {
+    position: relative;
+    color: hsl(0, 0%, 98%);
+    text-transform: capitalize;
+    margin: 20px;
+    padding-bottom: 25px; /* Adjust spacing for underline */
+}
+
+.article_title::after {
+    content: "";
+    position: absolute;
+    bottom: 0; /* Align to the bottom of the title */
+    left: 0;
+    width: 50px; /* Set width as desired */
+    height: 5px; /* Set height for the underline */
+    background: linear-gradient(to right, hsl(45, 100%, 72%), hsl(35, 100%, 68%));
+    border-radius: 3px;
+}
+
+.about-me-text {
+    padding: 20px;
+    color: hsl(0, 0%, 98%);
+    line-height: 1.6; /* Improve readability */
+    font-size: 1.1em; /* Slightly larger font size for better readability */
+}
+
+.focus-title{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    transition: font-size 0.3s ease;
+}
+
+.outer_icon{
+    position: relative;
+    font-size: 2vw; /* Responsive size (6% of viewport width) */
+    color: hsl(45, 100%, 72%);
+    transition: font-size 0.3s ease; /* Smooth transition for responsiveness */
+    padding-right: 4px;
+}
+/* 
+background: hsl(240, 1%, 20%); for footer */
+
+.slider-container {
+    overflow: hidden; /* Hide overflow to keep images within the container */
+    width: 100%; /* Adjust the width as needed */
+    position: relative;
+
+}
+
+.slider {
+    display: flex;
+    white-space: nowrap; /* Prevent images from wrapping */
+    animation: slide 15s linear infinite; /* Sliding animation */
+}
+
+.icon-skill {
+    width: 100px; /* Adjust size as needed */
+    height: 100px; /* Adjust size as needed */
+    border-radius: 10px; /* Optional: rounded corners */
+    margin: 0 25px; /* Space between images */
+    object-fit: cover; /* Ensures images cover the container proportionally */
+    transition: box-shadow 0.3s ease; /* Smooth transition for shadow effect */
+}
+
+.slider:hover {
+    animation-play-state: paused; /* Pause the animation on hover */
+}
+
+.icon-skill:hover {
+    transform: scale(1.1); /* Slightly increase the size on hover */
+    opacity: 1; /* Slightly reduce opacity on hover */
+    box-shadow: 0 10px 20px hsla(35, 100%, 68%, 1); /* Larger shadow with more blur and spread */
+}
+
+/* Keyframes for sliding effect */
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%); /* Adjust based on the number of images */
+    }
+}
+
+
+/* Certificates */
+#tech{
+    display: flex;
+}
+
+.timeline-list{
+    margin-left: 65px;
+    font-size: 15px;
+}
+
+.timeline-item{
+    position: relative;
+}
+
+.timeline-item:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: -30px;
+    width: 1px;
+    height: calc(100% + 50px);
+    background: hsl(0, 0%, 22%);
+}
+
+.timeline-item-title {
+    font-size: 15px;
+    line-height: 1.3;
+    margin-bottom: 7px;
+}
+
+.timeline-text {
+    color:hsl(0, 0%, 84%);;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.certificate-item {
+    display: inline-block;
+    overflow: hidden; /* Hide anything that overflows the container */
+}
+
+.certificate-container {
+    position: relative;
+    display: inline-block;
+    padding: 5px;
+    border: 10px solid black;
+    box-sizing: border-box;
+    
+}
+
+/* .certificate-item:hover{
+    width: 200%;
+} */
+
+.certificate-container img {
+    display: block;
+    width: 220px;
+    transition: all 2s ease-in-out 1s;
+}
+
+.certificate-item:hover  {
+    transform: scale(1.5); /* Adjust the scale factor as needed */
+}
+
+/* Contact Styles */
+.contact-email{
+    background: hsla(240, 2%, 12%, 0.418);
+    font-size:15px;
+    font-weight: 300;
+    width: 80%px;
+    margin: 5px auto;
+    border-radius: 18px;
+    /* max-width: 600px; Or any max-width you prefer */
+    overflow: hidden;
+}
+
+#email{
+    width: fit-content;
+
+    overflow: hidden;
+}
+
+
+.copy-email{
+    font-size: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    color:  hsl(35, 100%, 68%);
+    transition: color 0.25s ease;
+    font: inherit;
+    text-align: left;
+    display: block;
+    
+}
+
+
+#copyButton:hover {
+    transform: scale(1.1); /* Slightly increase the size on hover */
+    opacity: 0.8; /* Slightly reduce opacity on hover */
+}
+
+#copyFeedback {
+    margin-top: 10px;
+    font-size: 14px;
+    color:  hsl(35, 100%, 68%);
+}
+
+#textToCopy {
+    margin: 2px; /* Adjust as necessary */
+    overflow: hidden; /* Prevents text from overflowing */
+    text-overflow: ellipsis; /* Adds ellipsis if text overflows */
+    white-space: nowrap; /* Prevents text from wrapping to a new line */
+    font-size:1.25vw;
+}
+
+/* styles.css */
+.icon-container {
+    display: flex;
+    justify-content: center; /* Center the icons horizontally */
+    gap: 20px; /* Space between icons */
+    margin: 20px;
+
+}
+
+.icon-link {
+    display: inline-block;
+    text-decoration: none; /* Remove underline from links */
+}
+
+.icon {
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+    border-radius: 10px; /* Rounded corners for the icon */
+    transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.icon:hover {
+    transform: scale(1.1); /* Slightly increase the size on hover */
+    opacity: 1; /* Slightly reduce opacity on hover */
+    box-shadow: 0 10px 20px hsla(35, 100%, 68%, 1); /* Larger shadow with more blur and spread */
+}
+
+.next-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color:hsla(240, 2%, 12%, 0.418);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.next-button:hover {
+    background-color: hsla(45, 100%, 72%, 0.1);
+}
+
+/* Responsive */
+
+
+
+  @media (max-width: 992px) { /* Mobile devices */
+    #Side_Bar {
+      position: static; /* Remove sticky positioning */
+      max-height: none; /* Remove max-height */
+      margin: 20px auto; /* Center align with auto margins */
+      width: 100%; /* Full width */
+    }
+
+    #Main_content {
+      margin: 20px auto; /* Center align with auto margins */
+      width: 100%; /* Full width */
+    }
+    .article_title{
+        display: none;
+     }
+ 
+     .nav-container{
+         margin-bottom: 50px;
+     }
+   
+  }
+
+  @media (min-width: 992px) {
+    .project{
+        margin: 40px;
+        padding: 40px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .nav_item {
+        font-size: 16px; /* Adjust font size for smaller screens */
+        padding: 8px; /* Adjust padding for smaller screens */
+        min-width: 80px; /* Adjust minimum width for smaller screens */
+    }
+
+    #buttons {
+        padding: 8px 15px; /* Adjust padding for smaller screens */
+    }
+
+    #textToCopy {
+        font-size:2vw;
+    }
+
+    
+}
+
+@media (max-width: 480px) {
+    .nav_item {
+        font-size: 14px; /* Further adjust font size for very small screens */
+        padding: 6px; /* Further adjust padding */
+        min-width: 70px; /* Further adjust minimum width */
+    }
+
+
+    .nav_item{
+        padding: none; /* Further adjust padding */
+        margin: none;
+        gap: 2;
+    }
+
+    .icon {
+        width: 35px; /* Adjust size as needed */
+        height: 35px; /* Adjust size as needed */}
+}
+  
+
+  /* Optional: Additional media query for very small screens */
+  @media (max-width: 576px) {
+    #Side_Bar, #Main_content {
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 12px 40px hsla(0, 0%, 0%, 0.25);
+    }
+
+    .contact-email {
+        font-size: 12px;
+        padding: 6px; /* Further reduced padding for smaller screens */
+    }
+
+    .copy-email {
+        font-size: 14px; /* Further adjusted font size */
+        padding: 6px;
+    }
+
+    #copyButton{
+        display: none;
+    }
+
+    .project{
+        margin: none;
+        padding: none;
+        width: 100%;
+    }
+
+  }
