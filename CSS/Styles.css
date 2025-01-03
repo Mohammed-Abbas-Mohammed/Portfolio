@@ -413,7 +413,7 @@ background: hsl(240, 1%, 20%); for footer */
     overflow: hidden; /* Prevents text from overflowing */
     text-overflow: ellipsis; /* Adds ellipsis if text overflows */
     white-space: nowrap; /* Prevents text from wrapping to a new line */
-    font-size:1.5vw;
+    font-size:1.25vw;
 }
 
 /* styles.css */
@@ -504,7 +504,7 @@ background: hsl(240, 1%, 20%); for footer */
     }
 
     #textToCopy {
-        font-size:2vw;
+        font-size:3vw;
     }
 
     
